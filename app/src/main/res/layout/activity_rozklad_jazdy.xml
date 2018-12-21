@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorPressedHighlight"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".RozkladJazdy">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Rozkład jazdy"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/nazwaPrzystanku"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Przystanek" />
+
+    <EditText
+        android:id="@+id/numerLinii"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nazwaPrzystanku"
+        android:layout_alignLeft="@+id/nazwaPrzystanku"
+        android:ems="10"
+        android:hint="Numer linii przystanku" />
+
+    <EditText
+        android:id="@+id/godzinyOdjazdow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numerLinii"
+        android:layout_alignLeft="@+id/numerLinii"
+        android:ems="10"
+        android:hint="Godzina odjazdu autobusu" />
+
+    <Button
+        android:id="@+id/dodajPrzystanekButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/godzinyOdjazdow"
+        android:layout_alignStart="@+id/godzinyOdjazdow"
+        android:layout_alignLeft="@+id/godzinyOdjazdow"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginTop="22dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Dodaj przystanki"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/ListaPrzystankowButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dodajPrzystanekButton"
+        android:layout_alignEnd="@+id/godzinyOdjazdow"
+        android:layout_alignRight="@+id/godzinyOdjazdow"
+        android:layout_alignBottom="@+id/dodajPrzystanekButton"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/dodajPrzystanekButton"
+        android:layout_toRightOf="@+id/dodajPrzystanekButton"
+        android:background="@android:color/darker_gray"
+        android:ellipsize="middle"
+        android:text="Lista dostępnych przystanków"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/oAutorachButton"
+        android:layout_width="16dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/usunButton"
+        android:layout_alignEnd="@+id/usunButton"
+        android:layout_alignRight="@+id/usunButton"
+        android:layout_alignBottom="@+id/infoButton"
+        android:layout_marginStart="179dp"
+        android:layout_marginLeft="179dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="-12dp"
+        android:layout_marginRight="-12dp"
+        android:layout_marginBottom="-102dp"
+        android:layout_toEndOf="@+id/oAplikacjiButton"
+        android:layout_toRightOf="@+id/oAplikacjiButton"
+        android:text="Twórcy aplikacji"
+        android:textSize="8dp" />
+
+    <EditText
+        android:id="@+id/wpiszNumer"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_alignStart="@+id/infoButton"
+        android:layout_alignLeft="@+id/infoButton"
+        android:layout_alignEnd="@+id/usunButton"
+        android:layout_alignRight="@+id/usunButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="188dp"
+        android:ems="10"
+        android:hint="Wpisz ID przystanku"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/usunButton"
+        android:layout_alignStart="@+id/dodajPrzystanekButton"
+        android:layout_alignLeft="@+id/dodajPrzystanekButton"
+        android:layout_alignTop="@+id/edytujButton"
+        android:layout_alignEnd="@+id/edytujButton"
+        android:layout_alignRight="@+id/edytujButton"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginRight="103dp"
+        android:background="@android:color/holo_green_light"
+        android:text="Wyświetl przystanki"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/edytujButton"
+        android:layout_width="93dp"
+        android:layout_height="73dp"
+        android:layout_below="@+id/godzinyOdjazdow"
+        android:layout_alignStart="@+id/dodajPrzystanekButton"
+        android:layout_alignLeft="@+id/dodajPrzystanekButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginBottom="113dp"
+        android:text="Edycja"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/usunButton"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_alignBaseline="@+id/edytujButton"
+        android:layout_alignStart="@+id/edytujButton"
+        android:layout_alignLeft="@+id/edytujButton"
+        android:layout_alignTop="@+id/edytujButton"
+        android:layout_alignEnd="@+id/ListaPrzystankowButton"
+        android:layout_alignRight="@+id/ListaPrzystankowButton"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Usuń przystanki"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/oAplikacjiButton"
+        android:layout_width="303dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/infoButton"
+        android:layout_alignStart="@+id/infoButton"
+        android:layout_alignLeft="@+id/infoButton"
+        android:layout_alignBottom="@+id/usunButton"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="-174dp"
+        android:layout_marginRight="-174dp"
+        android:layout_marginBottom="-101dp"
+        android:layout_toStartOf="@+id/edytujButton"
+        android:layout_toLeftOf="@+id/edytujButton"
+        android:text="Wersja aplikacji"
+        android:textSize="8dp" />
+
+</RelativeLayout>
